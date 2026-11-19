@@ -435,7 +435,7 @@ a.cm-util__item:hover{color:#fff}
 
 /* ================= tablet ================= */
 @media (max-width: 1120px){
-  .cm-wrap{padding:0 40px}
+  .cm-wrap{padding-left:40px;padding-right:40px}
   .cm-sec{padding:104px 0}
   .cm-nav{display:none}
   .cm-burger{display:inline-flex}
