@@ -353,7 +353,7 @@ a.cm-util__item:hover{color:#fff}
   .cm-dine__stage{min-height:420px}
   .cm-spa__copy{padding:64px 44px 64px 40px}
   .cm-rev{gap:44px}
-  .cm-foot__grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cm-foot__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 24px}
   .cm-foot__brand{grid-column:1/-1}
 }
 
