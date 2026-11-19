@@ -29,10 +29,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" type="image/webp" imagesrcset="images/hero-resort-960.webp 960w, images/hero-resort-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=Outfit:wght@400;500;600;700&amp;display=swap">
-<link rel="stylesheet" href="css/styles.css?v=2">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;family=Outfit:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="css/styles.css?v=3">
 <script>document.documentElement.classList.add('js')</script>
-<script src="js/main.js?v=2" defer></script>
+<script src="js/main.js?v=3" defer></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -319,7 +319,7 @@
   </div>
   <header class="cm-head">
     <div class="cm-wrap cm-head__in">
-      <a class="cm-logo" href="#top" aria-label="ClubMulwala home"><img src="images/logo-colour.png" alt="ClubMulwala" width="164" height="46" fetchpriority="high"></a>
+      <a class="cm-logo" href="#top" aria-label="ClubMulwala home"><img class="cm-logo__c" src="images/logo-colour.png" alt="ClubMulwala" width="164" height="46" fetchpriority="high"><img class="cm-logo__w" src="images/logo-white.png" alt="" width="164" height="46" aria-hidden="true"></a>
       <nav class="cm-nav" aria-label="Main">
         <a class="cm-nav__a" href="#whats-on">What's On</a>
         <a class="cm-nav__a" href="#dining">Dining</a>
@@ -343,29 +343,69 @@
       </nav>
       <div class="cm-head__cta">
         <a class="cm-btn cm-btn--pri" href="https://www.clubmulwala.com.au/resort/enquire-online/">Enquire to stay</a>
-        <button class="cm-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="cm-mobile-nav" data-menu-toggle><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+        <button class="cm-burger" type="button" aria-expanded="false" aria-controls="cm-menu" data-menu-toggle><span>Menu</span><span class="cm-burger__i" aria-hidden="true"><i></i><i></i></span></button>
       </div>
     </div>
-    <div class="cm-mnav" id="cm-mobile-nav" data-menu>
-      <nav class="cm-wrap" aria-label="Mobile">
-        <a class="cm-mnav__a" href="#whats-on">What's On</a>
-        <a class="cm-mnav__a" href="#dining">Dining</a>
-        <a class="cm-mnav__a" href="#stay">Stay</a>
-        <a class="cm-mnav__a" href="#day-spa">Day Spa</a>
-        <a class="cm-mnav__a" href="#weddings-functions">Weddings &amp; Functions</a>
-        <a class="cm-mnav__a" href="#membership">Membership</a>
-        <a class="cm-mnav__a" href="#news">News</a>
-        <a class="cm-mnav__a" href="#visit">Contact</a>
-        <div class="cm-mnav__sub">
-          <a href="https://www.clubmulwala.com.au/club-info/club/">Your Club</a>
-          <a href="https://www.clubmulwala.com.au/club-info/facilities/">Facilities</a>
-          <a href="https://www.clubmulwala.com.au/club-info/free-courtesy-bus">Free Courtesy Bus</a>
-          <a href="https://www.clubmulwala.com.au/gift-vouchers">Vouchers</a>
-          <a href="https://www.clubmulwala.com.au/club-info/positions-vacant">Positions</a>
-        </div>
-      </nav>
-    </div>
   </header>
+  <div class="cm-menu" id="cm-menu" role="dialog" aria-modal="true" aria-label="Site menu" data-menu inert>
+    <div class="cm-menu__bg" aria-hidden="true"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 200 C200 250 380 120 620 170 C860 220 1040 110 1240 150 C1330 168 1400 186 1440 178"></path><path d="M0 250 C220 300 400 170 640 220 C880 270 1060 160 1260 200 C1340 216 1410 232 1440 226"></path></svg></div>
+    <div class="cm-wrap cm-menu__top">
+      <a class="cm-logo" href="#top" aria-label="ClubMulwala home"><img src="images/logo-white.png" alt="ClubMulwala" width="143" height="40"></a>
+      <button class="cm-menu__close" type="button" data-menu-close>Close <span class="cm-menu__x" aria-hidden="true"></span></button>
+    </div>
+    <div class="cm-wrap cm-menu__body">
+      <nav aria-label="Site">
+        <ul class="cm-menu__list">
+        <li class="cm-menu__item" style="--i:1">
+          <div class="cm-menu__row"><a class="cm-menu__a" href="#whats-on"><span class="cm-menu__n">01</span>What's On</a><button class="cm-menu__tog" type="button" aria-expanded="false" aria-controls="cm-sub-whatson" aria-label="Show What's On pages"></button></div>
+          <div class="cm-menu__sub" id="cm-sub-whatson"><div><ul><li><a href="https://www.clubmulwala.com.au/whats-on">Upcoming events</a></li><li><a href="https://www.clubmulwala.com.au/club-info/activities-competitions">Activities &amp; competitions</a></li></ul></div></div>
+        </li>
+        <li class="cm-menu__item" style="--i:2">
+          <div class="cm-menu__row"><a class="cm-menu__a" href="#dining"><span class="cm-menu__n">02</span>Dining</a><button class="cm-menu__tog" type="button" aria-expanded="false" aria-controls="cm-sub-dining" aria-label="Show Dining pages"></button></div>
+          <div class="cm-menu__sub" id="cm-sub-dining"><div><ul><li><a href="https://www.clubmulwala.com.au/dining-options/diggers-bistro-poppys-cafe">Diggers Bistro &amp; Poppy's Cafe</a></li><li><a href="https://www.clubmulwala.com.au/dining-options/stonegrill">Stonegrill</a></li><li><a href="https://www.clubmulwala.com.au/dining-options/oriental-pearl">Oriental Pearl</a></li></ul></div></div>
+        </li>
+        <li class="cm-menu__item" style="--i:3">
+          <div class="cm-menu__row"><a class="cm-menu__a" href="#stay"><span class="cm-menu__n">03</span>Stay</a><button class="cm-menu__tog" type="button" aria-expanded="false" aria-controls="cm-sub-stay" aria-label="Show Stay pages"></button></div>
+          <div class="cm-menu__sub" id="cm-sub-stay"><div><ul><li><a href="https://www.clubmulwala.com.au/resort/your-resort">Your Resort</a></li><li><a href="https://www.clubmulwala.com.au/resort/room-types/">Room types</a></li><li><a href="https://www.clubmulwala.com.au/resort/rates-specials/">Rates &amp; specials</a></li><li><a href="https://www.clubmulwala.com.au/resort/enquire-online/">Enquire online</a></li></ul></div></div>
+        </li>
+        <li class="cm-menu__item" style="--i:4"><a class="cm-menu__a" href="#day-spa"><span class="cm-menu__n">04</span>Day Spa</a></li>
+        <li class="cm-menu__item" style="--i:5">
+          <div class="cm-menu__row"><a class="cm-menu__a" href="#weddings-functions"><span class="cm-menu__n">05</span>Weddings &amp; Functions</a><button class="cm-menu__tog" type="button" aria-expanded="false" aria-controls="cm-sub-functions" aria-label="Show Weddings and Functions pages"></button></div>
+          <div class="cm-menu__sub" id="cm-sub-functions"><div><ul><li><a href="https://www.clubmulwala.com.au/club-info/weddings-at-clubmulwala">Weddings</a></li><li><a href="https://www.clubmulwala.com.au/club-info/functions">Functions</a></li><li><a href="https://www.clubmulwala.com.au/club-info/conferences-corporate-events">Conferences &amp; corporate</a></li><li><a href="https://www.clubmulwala.com.au/club-info/wakes-celebrations-of-life">Wakes &amp; celebrations of life</a></li></ul></div></div>
+        </li>
+        <li class="cm-menu__item" style="--i:6">
+          <div class="cm-menu__row"><a class="cm-menu__a" href="#membership"><span class="cm-menu__n">06</span>Membership</a><button class="cm-menu__tog" type="button" aria-expanded="false" aria-controls="cm-sub-member" aria-label="Show Membership pages"></button></div>
+          <div class="cm-menu__sub" id="cm-sub-member"><div><ul><li><a href="https://www.clubmulwala.com.au/membership/">Become a member</a></li><li><a href="https://www.clubmulwala.com.au/membership/benefits/">Member benefits</a></li><li><a href="https://www.clubmulwala.com.au/membership/clubmul-rewards/">ClubMulwala Rewards</a></li><li><a href="https://www.clubmulwala.com.au/news/the-new-clubmulwala-app-is-here">The ClubMulwala App</a></li></ul></div></div>
+        </li>
+        <li class="cm-menu__item" style="--i:7"><a class="cm-menu__a" href="#news"><span class="cm-menu__n">07</span>News</a></li>
+        <li class="cm-menu__item" style="--i:8"><a class="cm-menu__a" href="#visit"><span class="cm-menu__n">08</span>Contact &amp; Visit</a></li>
+        </ul>
+      </nav>
+      <div class="cm-menu__side">
+        <a class="cm-btn cm-btn--light cm-btn--block" href="https://www.clubmulwala.com.au/resort/enquire-online/">Enquire to stay</a>
+        <div>
+          <div class="cm-menu__k">Discover</div>
+          <div class="cm-menu__links">
+            <a href="https://www.clubmulwala.com.au/club-info/club/">Your Club</a>
+            <a href="https://www.clubmulwala.com.au/club-info/facilities/">Facilities</a>
+            <a href="https://www.clubmulwala.com.au/club-info/free-courtesy-bus">Courtesy bus</a>
+            <a href="https://www.clubmulwala.com.au/gift-vouchers">Gift vouchers</a>
+            <a href="https://www.clubmulwala.com.au/club-info/dress-code/">Dress code</a>
+            <a href="https://www.clubmulwala.com.au/club-info/positions-vacant">Positions</a>
+          </div>
+        </div>
+        <div>
+          <div class="cm-menu__k">Visit us</div>
+          <div class="cm-menu__info">
+            <span>Open today <strong data-today-hours>8am - 11.30pm</strong></span>
+            <span><a href="tel:0357442331">03 5744 2331</a></span>
+            <span>271 Melbourne Street, Mulwala NSW 2647</span>
+          </div>
+          <div class="cm-menu__social"><a href="https://www.facebook.com/ClubMulwala/">Facebook</a><a href="https://www.instagram.com/clubmulwala/">Instagram</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <main id="main">
   <section class="cm-hero" aria-labelledby="cm-h1" data-hero>
@@ -455,14 +495,14 @@
         <div class="cm-rv">
           <div class="cm-eyebrow"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Club Entertainment</div>
           <h2 class="cm-h2 cm-h2--xl" id="cm-whatson">What's On</h2>
-          <p class="cm-script" style="margin-top: 14px">Let us Entertain You!</p>
+          <p class="cm-script cm-script--sub">Let us Entertain You!</p>
         </div>
         <div class="cm-split-head__r cm-rv">
           <p class="cm-lead">We have Live &amp; Free Music every Friday and Saturday night. Alongside nationally recognised shows we also host a brilliant range of Music Festivals and local performers.</p>
           <a class="cm-btn cm-btn--light" href="https://www.clubmulwala.com.au/whats-on">View All Upcoming Events</a>
         </div>
       </div>
-      <div class="cm-cards3">
+      <div class="cm-cards3 cm-rail" data-rail>
         <a class="cm-ev cm-rv" href="https://www.clubmulwala.com.au/whats-on/epic-cinemagic-hitz">
           <div class="cm-ev__ph"><picture><source type="image/webp" srcset="images/event-epic-cinemagic-hitz-400.webp 400w, images/event-epic-cinemagic-hitz-800.webp 800w" sizes="(max-width: 760px) 100vw, 400px"><img src="images/event-epic-cinemagic-hitz-800.jpg" srcset="images/event-epic-cinemagic-hitz-400.jpg 400w, images/event-epic-cinemagic-hitz-800.jpg 800w" sizes="(max-width: 760px) 100vw, 400px" width="800" height="600" alt="Epic Cinemagic Hitz show poster" loading="lazy" decoding="async"></picture><div class="cm-ev__date"><span class="cm-ev__d">21</span><span class="cm-ev__mo">Nov</span></div></div>
           <div class="cm-ev__body">
@@ -574,7 +614,7 @@
   <section id="day-spa" aria-labelledby="cm-spa">
       <div class="cm-spa">
         <div class="cm-spa__copy cm-rv">
-          <div class="cm-eyebrow" style="color: #7AB8F5"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Relax and unwind</div>
+          <div class="cm-eyebrow cm-eyebrow--sky"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Relax and unwind</div>
           <h2 class="cm-h2" id="cm-spa">Essenza Day Spa</h2>
           <p class="cm-lead">Adjacent to the Club and Resort, Essenza Day Spa offers rejuvenating massage, beauty and hydrotherapy services, provided by our team of professional therapists ready to pamper you.</p>
           <span class="cm-spa__perk"><svg class="cm-ic cm-ic--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Members get 10% off treatments &amp; products</span>
@@ -588,7 +628,7 @@
       <div class="cm-center-head cm-rv">
         <div class="cm-eyebrow"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Weddings &amp; Functions</div>
         <h2 class="cm-h2" id="cm-wf">Celebrate on the waterfront</h2>
-        <p class="cm-script" style="margin-top: 16px">We've got your next Function sorted!</p>
+        <p class="cm-script cm-script--sub">We've got your next Function sorted!</p>
       </div>
       <div class="cm-duo">
         <article class="cm-panel cm-rv">
@@ -706,14 +746,14 @@
     <div class="cm-wrap cm-rev">
       <div class="cm-rev__left cm-rv">
         <div class="cm-eyebrow"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Google reviews</div>
-        <h2 class="cm-h2" id="cm-reviews" style="font-size: 34px">What Our Customers Say</h2>
-        <div class="cm-rev__score" style="margin-top: 22px">4.4</div>
+        <h2 class="cm-h2 cm-h2--sm" id="cm-reviews">What Our Customers Say</h2>
+        <div class="cm-rev__score">4.4</div>
         <div class="cm-stars" role="img" aria-label="Rated 4.4 out of 5">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"></path></svg>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"></path></svg>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"></path></svg>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"></path></svg>
-          <svg viewBox="0 0 24 24" aria-hidden="true" style="opacity: .4"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"></path></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="cm-star--part"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"></path></svg>
         </div>
         <p class="cm-rev__meta">Based on 2,012 Google reviews</p>
       </div>
@@ -753,7 +793,7 @@
         </div>
         <a class="cm-btn cm-btn--line" href="https://www.clubmulwala.com.au/news">View More News</a>
       </div>
-      <div class="cm-cards3">
+      <div class="cm-cards3 cm-rail" data-rail>
         <a class="cm-news cm-rv" href="https://www.clubmulwala.com.au/news/new-year-s-eve-dinner-dance-paris-at-midnight">
           <div class="cm-news__ph"><picture><source type="image/webp" srcset="images/news-nye-dinner-dance-400.webp 400w, images/news-nye-dinner-dance-800.webp 800w" sizes="(max-width: 760px) 100vw, 400px"><img src="images/news-nye-dinner-dance-800.jpg" srcset="images/news-nye-dinner-dance-400.jpg 400w, images/news-nye-dinner-dance-800.jpg 800w" sizes="(max-width: 760px) 100vw, 400px" width="800" height="600" alt="New Year's Eve Dinner Dance, Paris at Midnight poster" loading="lazy" decoding="async"></picture></div>
           <div class="cm-news__body">
@@ -779,6 +819,7 @@
           </div>
         </a>
       </div>
+      <a class="cm-btn cm-btn--line cm-news-more" href="https://www.clubmulwala.com.au/news">View more news</a>
     </div>
   </section>
   <section class="cm-sec" id="visit" aria-labelledby="cm-visit">
@@ -787,7 +828,7 @@
         <picture><source type="image/webp" srcset="images/hero-bridge-960.webp 960w, images/hero-bridge-1920.webp 1920w" sizes="100vw"><img src="images/hero-bridge-1920.jpg" srcset="images/hero-bridge-960.jpg 960w, images/hero-bridge-1920.jpg 1920w" sizes="100vw" width="1920" height="1080" alt="ClubMulwala from the air, beside Lake Mulwala" loading="lazy" decoding="async"></picture>
         <div class="cm-visit__shade"></div>
         <div class="cm-visit__in">
-          <div class="cm-eyebrow" style="color: #7AB8F5"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Our Location</div>
+          <div class="cm-eyebrow cm-eyebrow--sky"><svg class="cm-wave" viewBox="0 0 58 14" aria-hidden="true"><path d="M2 11 Q8 10 11 3 Q14 10 20 11 Q26 10 29 3 Q32 10 38 11 Q44 10 47 3 Q50 10 56 11"></path></svg>Our Location</div>
           <h2 class="cm-h2" id="cm-visit">Enquiries &amp; Reservations</h2>
           <ul class="cm-contact">
             <li><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg><span>Call us on <a href="tel:0357442331">03 5744 2331</a></span></li>
@@ -887,10 +928,11 @@
       </div>
     </div>
   </footer>
-  <nav class="cm-mbar" aria-label="Quick actions">
+  <nav class="cm-mbar" aria-label="Quick actions" data-mbar>
     <a href="tel:0357442331"><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>Call</a>
-    <a class="is-pri" href="#whats-on"><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"></path><path d="M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path><path d="M20 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path></svg>What's On</a>
-    <a href="#stay"><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18V7M3 13h18v5M21 13v-2a3 3 0 0 0-3-3h-7v5"></path><path d="M7 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></svg>Stay</a>
+    <a href="#whats-on"><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"></path><path d="M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path><path d="M20 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path></svg>Events</a>
+    <a href="#dining"><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v7a2 2 0 0 0 2 2v9M5 3v5M9 3v5"></path><path d="M17 3c-2 2-3 4-3 7h3v11"></path></svg>Dine</a>
+    <a class="is-pri" href="https://www.clubmulwala.com.au/resort/enquire-online/"><svg class="cm-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18V7M3 13h18v5M21 13v-2a3 3 0 0 0-3-3h-7v5"></path><path d="M7 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></svg>Book a stay</a>
   </nav>
 
 </div>

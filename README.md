@@ -30,4 +30,5 @@ Plain HTML, CSS and JavaScript. No build step, no frameworks, no dependencies.
 - **Events, news and hours** reflect the live site as of November 2026 and need updating as they change (also update the Event entries in the JSON-LD in `index.html`).
 - **Logo** is the existing PNG. A vector (SVG) version from the club would make it sharper on high-res screens.
 - **Oriental Pearl photo** is the highest resolution available on the current site (1120px wide). A new photo would lift that panel.
-- **Fonts** load from Google Fonts (Outfit, Inter, Fraunces).
+- **Fonts** load from Google Fonts (Fraunces for headings, Inter for body text, Outfit for labels and buttons).
+- **After editing CSS or JS**, bump the `?v=` number on the `styles.css` and `main.js` links in `index.html` so visitors get the new version straight away.
